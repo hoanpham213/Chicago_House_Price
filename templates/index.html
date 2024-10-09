@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Dự đoán Giá Nhà Chicago</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Dự đoán Giá Nhà Chicago</h1>
+    <form action="/" method="post">
+        <label>Bedroom: <input type="number" name="bedroom" required></label><br>
+        <label>Space (sq ft): <input type="number" name="space" required></label><br>
+        <label>Room: <input type="number" name="room" required></label><br>
+        <label>Lot (sq ft): <input type="number" name="lot" required></label><br>
+        <label>Tax ($): <input type="number" name="tax" required></label><br>
+        <label>Bathroom: <input type="number" name="bathroom" required></label><br>
+        <label>Garage (cars): <input type="number" name="garage" required></label><br>
+        <label>Condition:
+            <select name="condition" required>
+                <option value="1">Condition 1</option>
+                <option value="2">Condition 2</option>
+                <option value="3">Condition 3</option>
+                <option value="4">Condition 4</option>
+                <option value="5">Condition 5</option>
+            </select>
+        </label><br>
+
+        <!-- Model selection -->
+        <label>Mô hình dự đoán:
+            <select name="model" required>
+                <option value="Linear Regression">Linear Regression</option>
+                <option value="Ridge Regression">Ridge Regression</option>
+                <option value="Neural Network">Neural Network</option>
+                <option value="Stacking Regressor">Stacking Regressor</option>
+            </select>
+        </label><br>
+        <input type="submit" value="Dự đoán">
+    </form>
+</body>
+</html>
